@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example 5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'borel', cursive;
+        }
+
+        :root {
+            --color: rgb(55, 55, 218);
+            --text-color: aqua;
+            --sec-color: rgba(105, 163, 69, 0.699);
+            --fix: sticky;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Autour+One&family=Borel&family=Pixelify+Sans&family=Sacramento&display=swap');
+
+        body {
+            background-color: var(--sec-color);
+        }
+        .main-parent{
+            height: auto;
+            width: auto;
+            position: relative;
+        }
+
+        .header {
+            top: 0;
+            position: sticky;
+            height: auto;
+            width: auto;
+            
+        }
+
+        nav {
+            background-color: black;
+            color: aqua;
+            
+            display: flex;
+            flex-wrap: wrap;
+            flex-shrink: 3;
+            justify-content: space-around;
+            cursor: pointer;
+            position: sticky;
+        }
+
+        .zoro img {
+            height: 35px;
+        }
+
+        nav ul li span {
+            padding: 0;
+        }
+        nav ul{
+            display: flex;
+
+        }
+        nav ul li {
+            list-style: none;
+            padding: 0 15px;
+
+        }
+
+        .new {
+            text-align: center;
+            margin-top: 15px;
+            color: white;
+
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .bigparent {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 80px;
+            overflow:visible;
+            top: auto;
+        }
+
+        .anime {
+            width: 100%;
+            top: 0px;
+            justify-content: center;
+            align-items: center;
+            position:static;
+        }
+
+        .anime h1 {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            text-decoration-line: underline;
+        }
+
+        .parent {
+            background-color: rgb(29, 25, 25);
+            border: 2px solid white;
+            height: 450px;
+            width: 260px;
+            border-radius: 10px;
+            padding: 0 0 34px 0;
+            margin: 7px;
+            border: 2px solid black;
+        }
+
+        .image {
+            padding: 5px;
+        }
+
+        .image img {
+            border-radius: 7px;
+        }
+
+        .image img :hover {
+            background-color: blanchedalmond;
+            color: white;
+        }
+
+        .container {
+            padding: 7px 13px;
+            height: 150px;
+            overflow-y: scroll;
+
+        }
+
+        .container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cap {
+            padding: 0 34px 15px 14px;
+            color: white;
+            font-family: 'borel', sans-serif;
+        }
+
+        .container p {
+            padding: 0 4px 0 4px;
+            color: rgb(231, 209, 209);
+            font-family: 'agbalumo', serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cap span {
+            border-radius: 11px;
+            font-size: 10px;
+            border: 2px solid grey;
+            padding: 3px 2px;
+        }
+
+        .container h2 {
+            padding: 0 7px 0 7px;
+            color: rgb(218, 84, 117);
+            font-family: 'autour one', cursive;
+        }
+
+        .button {
+            text-align: center;
+
+        }
+
+        .button button {
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(72, 212, 72);
+            font-size: 15px;
+            margin-top: 10px;
+            padding: 4px 7px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+
+
+        }
+
+        .button button:hover {
+            background-color: blueviolet;
+            color: white;
+        }
+
+
+        .smallfoot {
+            width: 100%;
+            font-style: italic;
+            text-decoration: underline;
+            position: static;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-parent">
+    <div class="header">
+        <header>
+            <nav>
+                <div class="zoro">
+                    <img src="images/logo.png" alt="zoro">
+                </div>
+                <ul>
+                    <li><span>Home</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>About</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Service</span><svg width="14" height="21" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Contact us</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <hr style="color: aqua;">
+    </div>
+    <div class="anime">
+        <h1>Anime List</h1>
+    </div>
+    <div class="bigparent">
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/one piece.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Action</span>
+                <span>Adventures</span>
+
+            </div>
+            <div class="container">
+                <h2>One piece</h2>
+                <p>The story follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, where he
+                    explores the Grand Line in search of the mythical treasure known as the "One Piece" in order to
+                    become
+                    the next King of the Pirates.</p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/naruto.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Shounen</span>
+                <span>Action</span>
+
+            </div>
+            <div class="container">
+                <h2>Naruto</h2>
+                <p>Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of
+                    Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the
+                    Hokage, the leader of his village.</p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/bleach.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Adventure Martial arts </span>
+                <span>Supernatural</span>
+
+            </div>
+            <div class="container">
+                <h2>Bleach</h2>
+                <p>How would you describe bleach anime?
+                    Bleach follows the adventures of Ichigo Kurosaki, a high school student with the ability to see
+                    ghosts, and Rukia Kuchiki, a Shinigami. The early parts of the story focus mainly on the characters.
+                </p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/dbz.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Action</span>
+                <span>Drama</span>
+
+            </div>
+            <div class="container">
+                <h2>Dragon Ball Z</h2>
+                <p>It tells the story of Goku (son Goku in Japan) who is an incredible man born with an amazing fighting
+                    talent. His strength never ceases and he becomes stronger and stronger.</p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/jjk.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Action</span>
+                <span>Thriller</span>
+
+            </div>
+            <div class="container">
+                <h2>Jujutsu Kaisen</h2>
+                <p>A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a
+                    shaman's school to be able to locate the demon's other body parts and thus exorcise himself.</p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="image">
+                <img width="250px" height="180px" src="images/demon slayer.jpg" alt="peak">
+            </div>
+            <div class="cap">
+                <span>Action</span>
+                <span>Supernatural</span>
+
+            </div>
+            <div class="container">
+                <h2>Demon Slayer</h2>
+                <p>Tanjiro Kamado is a kind-hearted and intelligent boy who lives with his
+                    family in the mountains. After his father's death, he became his family's breadwinner, traveling to
+                    the nearby village to sell charcoal. One day, he came home and discovers his family was attacked and
+                    slaughtered by a demon.</p>
+            </div>
+            <div class="button">
+                <button>Click Here</button>
+            </div>
+        </div>
+    </div>
+    <div style="color: antiquewhite;" class="smallfoot">
+        Hello there this is my forst interactive project of all i am a fresher to this web development and i already
+        learned
+        about the basics of python and c programming and now learning about the html and css if someone visits this
+        website
+        if you have any query contact me on phone no 9667140848 my name is seenu.Thank you</no>
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa officiis, exercitationem et eaque quos vero
+        aliquam
+        ex tempore iste veritatis voluptate, numquam pariatur? Maxime iste nesciunt sed facilis quasi iusto?
+    </div>
+    </div>
+</body>
+
+</html>
